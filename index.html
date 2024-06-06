@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>My First Blog</title>
+    <link rel="stylesheet" type="text/css" href="./assets/css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/form.css" />
+    <script
+      src="https://kit.fontawesome.com/55b6de9a33.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div class="container light">
+      <div class="menu">
+        <ul>
+          <li>
+            <a href="" class="fa-solid fa-sun" id="switchThemeIcon"></a>
+          </li>
+        </ul>
+      </div>
+      <main>
+        <div class="card-left">
+          <img src="./assets/images/blogger.svg" alt="Stylized Letter B for blogger" id="bloggerImage" />
+        </div>
+        <div class="card-right">
+        <h3>LOCAL STORAGE BLOG</h3>
+        <form>
+          <div class="input">
+            <div class="input-group">
+              <input type="text" name="username" id="username" placeholder="Username" />
+            </div>
+            <div class="input-group">
+              <input type="text" name="title" id="title" placeholder="Title"/>
+            </div>
+            <div class="input-group">
+              <textarea name="content" rows="5" id="content" placeholder="Blog Content..."></textarea>
+            </div>
+            <button id="submitBlog">SUBMIT BLOG</button>
+        </form>
+        </div>
+      </main>
+    </div>
+    <!-- Inclue JQuery Library -->
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> -->
+    <script src="./assets/js/logic.js"></script>
+    <script src="./assets/js/form.js"></script>
+  </body>
+</html>
