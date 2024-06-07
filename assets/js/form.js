@@ -1,12 +1,11 @@
-console.log('form.js loaded');
 //form validation
 const button = document.querySelector('#submitBlog');
 
-// add form data as object to array in local storage
+// listen for submit button click
 button.addEventListener('click', function (event) {
   event.preventDefault();
   console.log('Submit button clicked');
-  //validate form data
+  //validate form data and alert user if any field is empty
   if (
     !document.getElementById('username').value.trim() ||
     !document.getElementById('title').value.trim() ||
@@ -16,18 +15,14 @@ button.addEventListener('click', function (event) {
     return;
   }
 
+  // create blog object from form data
   const blogContent = {
     username: document.getElementById('username').value.trim(),
     title: document.getElementById('title').value.trim(),
     content: document.getElementById('content').value.trim(),
   };
-  console.log(blogContent);
-  // if (localStorage.getItem('blogArray') === null) {
-  //   localStorage.setItem('blogArray', '[]');
-  // }
-  // localstorage.setItem('blogArray', JSON.stringify(blogContent));
-  // Retrieve existing blogsArray from local storage
 
+  // store blog object in local storage as an array of objects
   let blogsArray = JSON.parse(localStorage.getItem('blogsArray')) || [];
   blogsArray.push(blogContent);
   localStorage.setItem('blogsArray', JSON.stringify(blogsArray));
