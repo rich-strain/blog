@@ -29,4 +29,5 @@ button.addEventListener('click', function (event) {
 
   //clear form fields
   document.getElementById('blogForm').reset();
+  window.location.href = 'blog.html';
 });
