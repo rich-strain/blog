@@ -1,69 +1,145 @@
-@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap');
-
-/* Variables For Background Color */
 :root {
-  --darkBlue: #072a40;
-  --medBlue: #178ca4;
-  --lightBlue: #18b7be;
+  --lightBlueDark4: #01579b;
+  --lightBlueDark3: #0277bd;
+  --lightBlueDark2: #0288d1;
+  --lightBlueDark1: #039be5;
+  --lightBlue: #03a9f4;
+  --lightBlueLight1: #29b6f6;
+  --lightBlueLight2: #4fc3f7;
+  --lightBlueLight3: #81d4fa;
+  --lightBlueLight4: #b3e5fc;
+  --lightBlueLight5: #e1f5fe;
+  --moon: #f6f1d5;
+}
+
+/* HTML Elements */
+body {
+  background-color: var(--lightBlueLight5);
+  display: flex;
+  min-height: 100vh; /* ensures footer stays at the bottom */
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+nav {
+  background-color: var(--lightBlueDark1);
+}
+
+/* HTML Classes */
+.icon-block {
+  padding: 0 15px;
+  background-color: #fff;
+}
+
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+.page-footer {
+  background-color: var(--lightBlueLight3);
+  width: 100%;
+}
+
+/* HTML IDs */
+#footerB {
+  background-color: var(--lightBlueLight1);
+}
+
+#footerB a {
+  color: var(--blueGrayLight5);
+}
+
+#logo-container img {
+  vertical-align: middle;
+}
+
+#mode {
+  color: var(--moon);
+}
+
+#submitBlog {
+  background-color: var(--lightBlueDark1);
+}
+
+/* Dark Mode Styles */
+:root[theme='dark'] {
+  --darkBlue: #1b262c;
+  --medBlue: #0f4c75;
+  --blue: #3282b8;
+  --lightBlue: #bbe1fa;
   --sand: #f9f7f0;
   --lightGray: #bebebe;
-}
 
-body {
-  font-family: 'Hammersmith One', sans-serif;
-  display: block;
-  margin: 0px;
-}
-.container {
-  position: relative;
-}
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
+  --blueGrayDark4: #263238;
+  --blueGrayDark3: #37474f;
+  --blueGrayDark2: #455a64;
+  --blueGrayDark1: #546e7a;
+  --blueGray: #607d8b;
+  --blueGrayLight1: #78909c;
+  --blueGrayLight2: #90a4ae;
+  --blueGrayLight3: #b0bec5;
+  --blueGrayLight4: #cfd8dc;
+  --blueGrayLight5: #eceff1;
 
-li {
-  float: left;
-}
+  /* HTML Elements */
+  body {
+    background-color: var(--blueGrayDark4);
+  }
 
-.menu li a {
-  font-size: 25px;
-}
+  input {
+    color: var(--blueGrayLight5);
+  }
 
-li a {
-  display: block;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 20px;
-}
+  label {
+    color: var(--blueGrayLight4);
+  }
 
-p {
-  font-size: 20px;
-}
+  /* HTML Classes */
+  .card {
+    background-color: var(--blueGrayDark1);
+    color: var(--blueGrayLight5);
+  }
 
-.menu {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
+  .card-action {
+    background-color: var(--blueGrayDark2);
+  }
 
-.footer {
-  width: 100%;
-  position: absolute;
-  bottom: 0px;
-  display: flex;
-  justify-content: center;
-}
+  .icon-block {
+    background-color: var(--blueGrayDark1);
+    border-color: var(--darkBlue);
+  }
 
-/* Flexbox */
-.row {
-  margin: 20px;
-  display: flex;
-}
-.col {
-  margin: 20px;
+  .materialize-textarea {
+    background-color: var(--blueGrayDark1);
+    color: var(--blueGrayLight5);
+  }
+
+  .page-footer {
+    background-color: var(--blueGrayDark2);
+  }
+
+  /* HTML IDs */
+
+  #footerB {
+    background-color: var(--blueGrayDark1);
+  }
+  #footerB a {
+    color: var(--blueGrayLight5);
+  }
+
+  #mode {
+    color: gold;
+  }
+
+  #nav {
+    background-color: var(--blueGrayDark3);
+  }
+
+  #submitBlog {
+    background-color: var(--blueGrayDark2);
+    color: var(--blueGrayLight5);
+  }
 }

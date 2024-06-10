@@ -1,41 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="UTF-8" />
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" /> -->
-    <title>My First Blog</title>
-    <link rel="stylesheet" type="text/css" href="./assets/css/styles.css" />
+    <title>My First Blog Content</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
     <link rel="stylesheet" type="text/css" href="./assets/css/blog.css" />
-    <script
-      src="https://kit.fontawesome.com/55b6de9a33.js"
-      crossorigin="anonymous"
-    ></script>
+
+    <script>
+      const theme = localStorage.getItem('theme');
+      console.log(`Page Loaded - Current Theme Is: ${theme}`);
+      if (theme) document.documentElement.setAttribute('theme', theme);
+    </script>
   </head>
 
   <body>
-    <div class="container light">
-      <div class="menu">
-        <ul>
-          <li><a href="index.html">BACK</a></li>
-          <li><a href="" class="fa-solid fa-moon" id="switchThemeIcon"></a></a></li>
-        </ul>
+    <header>
+      <nav role="navigation" id="nav">
+        <div class="nav-wrapper container">
+          <a id="logo-container" href="#" class="brand-logo"><img src="./assets/images/blogger-40x40.svg" /></a>
+          <ul class="right">
+            <li>
+              <a href="#"><i class="material-icons" id="goBack">arrow_back</i></a>
+            </li>
+            <li>
+              <a href="#" id="theme-switch"><i class="material-icons" id="mode">dark_mode</i></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="container">
+        <div class="section">
+          <div class="row">
+            <div id="card-container">
+              <!-- Dynamically Display Cards For Blogs -->
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="row">
-        <main id="card-container">
-        <!-- Dynamic Blog Cards From localStorage Displayed Here -->
-        </main>
+    </main>
+    <footer class="page-footer">
+      <div class="container">
+        <!-- Creates top margin band for footer -->
       </div>
-      <div class="footer">
-        <ul>
-          <li>
-            <a href="https://rich-strain.github.io/project-portfolio/"
-              >PORTFOLIO</a
-            >
-          </li>
-        </ul>
+      <div class="footer-copyright" id="footerB">
+        <div class="container"><a href="https://rich-strain.github.io/project-portfolio/">VIEW MY PORTFOLIO</a></div>
       </div>
-    </div>
+    </footer>
+    <!-- Scipts Go Here -->
     <script src="./assets/js/logic.js"></script>
     <script src="./assets/js/blog.js"></script>
   </body>
