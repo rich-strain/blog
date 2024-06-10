@@ -6,12 +6,8 @@ button.addEventListener('click', function (event) {
   event.preventDefault();
   console.log('Submit button clicked');
   //validate form data and alert user if any field is empty
-  if (
-    !document.getElementById('username').value.trim() ||
-    !document.getElementById('title').value.trim() ||
-    !document.getElementById('content').value.trim()
-  ) {
-    alert('Please fill out all fields');
+  if (!document.getElementById('username').value.trim() || !document.getElementById('title').value.trim() || !document.getElementById('content').value.trim()) {
+    alert('Please fill out all fields.');
     return;
   }
 

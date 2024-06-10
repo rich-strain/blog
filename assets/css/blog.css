@@ -1,67 +1,7 @@
-.blog-card {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  background-color: #fff;
-  border: 1px solid #eceff1;
-  border-radius: 8px;
-  box-shadow: rgba(60, 64, 67, 0.3) 0 1px 2px 0,
-    rgba(60, 64, 67, 0.15) 0 1px 3px 1px;
-  background-color: #fdfdfb;
-  margin-bottom: 20px;
+/* Styles For BLog Cards */
+.card {
+  border-radius: 12px;
 }
-.blog-header {
-  height: 50px;
-  padding-left: 20px;
-}
-.blog-content {
-  padding: 2px 20px;
-}
-
-/* Dark Mode */
-.dark {
-  background-color: var(--darkBlue);
-  height: 100vh;
-  color: #728190;
-}
-
-.dark li a {
-  color: #728190;
-}
-
-.dark li a:hover {
-  background-color: #253e53;
-}
-.dark .blog-card {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  border: 2px solid #253e53;
-  border-radius: 8px;
-  background-color: #a6cbd6;
-}
-.dark .blog-header {
-  height: 50px;
-  background: #253e53;
-  color: #728190;
-  text-align: center;
-}
-.dark .blog-content {
-  padding: 2px 20px;
-  color: black;
-}
-
-/* Light Mode */
-.light {
-  background-color: var(--sand);
-  color: black;
-  height: 100vh;
-}
-
-.light li a {
-  color: black;
-}
-
-.light li a:hover {
-  background-color: #fdfdfb;
+.card .card-action:last-child {
+  border-radius: 0 0 12px 12px;
 }
