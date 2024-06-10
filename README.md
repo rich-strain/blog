@@ -1,4 +1,4 @@
-# Blog
+# Local Storage Blog
 
 As a marketing student, I want a personal blog to showcase my thoughts and experiences.
 
@@ -30,7 +30,7 @@ The completed application should meet the following criteria:
 - WHEN I view the footer,
 - THEN I am presented with a link to the developer's portfolio.
 
-# Deployed URL
+## Deployed URL
 
 - https://rich-strain.github.io/blog/
 
